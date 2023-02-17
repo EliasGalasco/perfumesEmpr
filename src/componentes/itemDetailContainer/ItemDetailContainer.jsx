@@ -67,9 +67,9 @@ function ItemDetailContainer() {
   }
 
   return (
-    <Card className='ItemDetail img-fluid cardsDetail d-flex justify-content-center cards'>
-          <Card.Img variant="top" className='h-5  imgDetail img-fluid d-flex justify-content-center' src={productos.imagen} />
-          <Card.Body>
+    <Card className='ItemDetail  img-fluid cardsDetail d-flex justify-content-center cards'>
+          <Card.Img variant="top" className='h-5 imgMixD  imgDetail img-fluid d-flex justify-content-center' src={productos.imagen} />
+          <Card.Body >
             <Card.Title className="titulo">{productos.titulo}</Card.Title>
             <Card.Text className='detalle detail'>
               {productos.detalle}

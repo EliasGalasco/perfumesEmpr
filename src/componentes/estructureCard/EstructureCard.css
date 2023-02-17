@@ -110,3 +110,19 @@
     transform: none;
     filter: brightness(1.2);
 }
+/*-- MIXINS --*/
+@media (max-width: 500px) {
+    .imgMix{
+        height: 300px;
+    }
+    .imgMixD{
+        height: 350px!important;
+    }
+    .card-container{
+        height: 300px;
+    }
+    .carousel{
+        height: 400px;
+        margin-bottom: 20px;
+    }
+}
