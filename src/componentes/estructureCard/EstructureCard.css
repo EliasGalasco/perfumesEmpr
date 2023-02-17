@@ -1,0 +1,112 @@
+/*------Cards config general shop-------*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Oswald:wght@200&display=swap');
+.card-img-top {
+    height: 350px;
+}
+
+.card-img-top:hover {
+    transform: scale(1.05);
+    transition: all 0.7s;
+    overflow: hidden;
+    filter: brightness(1.1);
+}
+
+.cards {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+}
+.cards:hover {
+    transform: scale(1.05);
+    transition: all 0.7s;
+    overflow: hidden;
+}
+
+.card-text {
+    font-size: 20px;
+    text-align: center;
+}
+/*------price config shop-------*/
+
+.precios{
+        display: flex;
+        margin: 10px auto;
+        justify-content: space-between;
+}
+.precio {
+    flex-wrap: nowrap;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: start;
+}
+/*------stock config shop-------*/
+
+.stock{
+    flex-wrap: nowrap;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: right;
+}
+.green{
+    color: greenyellow;
+}
+.red{
+    color: rgb(255, 0, 0);
+}
+/*------Boton config shop-------*/
+.btn {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    background-color: #232f3d;
+    transition: ease all .3s;
+    cursor: pointer;
+    align-items: center;
+    margin-left: 29px;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 10px 0 #121618;
+}
+.btnDetalle{
+    background-color: rgb(161, 154, 154);
+    padding: 5px 40px;
+
+}
+.Btn-irCarrito{
+    margin: 0px;
+    margin-left: 178px!important;
+}
+.imgCart{
+    height: 100px!important;
+    margin: 5px;
+}
+.btnEliminar{
+    height: 50px;
+    margin-top: 0px;
+    margin-left: 20px;
+}
+.disabled{
+    display: none;
+}
+.titulo{
+    font-family: 'Oswald', sans-serif;
+    font-weight: bolder;
+    display: flex;
+    font-size: 26px;
+    justify-content: center;
+}
+.detail{
+    font-family: 'Oswald', sans-serif;
+    overflow: hidden;
+}
+.img-fluid:hover{
+    transform: none;
+    filter: brightness(1.2);
+}

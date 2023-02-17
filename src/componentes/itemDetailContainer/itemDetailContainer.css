@@ -1,0 +1,28 @@
+.ItemDetail{
+    display: flex;
+    justify-content: center!important;
+    align-items: center;
+    width: 900px;
+}
+.imgDetail{
+    width: auto;
+    height: 500px;
+    display: inline-block;
+}
+.cardDetail:hover{
+    transform:  none;
+    transition: none;
+}
+.carrito{
+    color: rgb(219, 23, 209);
+    padding-right: 15px;
+}
+.detalle{
+    height: 120px;
+}
+.Btn-irCarrito{
+    padding: 5px;
+    font-size: 15px;
+    font-weight: lighter;
+    margin-left: 5px;
+}
