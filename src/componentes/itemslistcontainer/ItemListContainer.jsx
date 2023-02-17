@@ -42,7 +42,7 @@ function ItemListConatainer() {
     
     return (
         <>
-        {/* <Inicio/> */}
+        <Inicio/>
         {
                 <ItemList products={products} />
         }

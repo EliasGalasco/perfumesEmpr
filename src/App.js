@@ -15,7 +15,7 @@ function App() {
   return (
     /*4 Colocar Provider personalizado */
     <CartContextProvider>
-        <button onClick={exportDataWithBatch}>Exportar</button> 
+        {/* <button onClick={exportDataWithBatch}>Exportar</button>   */}
         <BrowserRouter>
           <NavBar/>
             <Routes>
