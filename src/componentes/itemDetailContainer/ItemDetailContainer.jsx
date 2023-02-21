@@ -67,44 +67,90 @@ function ItemDetailContainer() {
   }
 
   return (
-    <Card className='ItemDetail  img-fluid cardsDetail d-flex justify-content-center cards'>
-          <Card.Img variant="top" className='h-5 imgMixD  imgDetail img-fluid d-flex justify-content-center' src={productos.imagen} />
-          <Card.Body >
-            <Card.Title className="titulo">{productos.titulo}</Card.Title>
-            <Card.Text className='detalle detail'>
-              {productos.detalle}
-            </Card.Text>
-            <div className='precios'>
-            {
-              productos.discount?
-              <p className='precio'><del>${Math.round(productos.precio + ((productos.precio * productos.discount)/100))}</del><br /> ${Math.round(productos.precio)} </p>
+    <div class="container-fluid row ">
+      <div class="col-12 col-md-6 d-flex justify-content-center">
+        <img class="" src={productos.imagen} alt=""/>
+      </div>
+      <div class="col-12 col-md-12 col-lg-6">
+            <h2 class="d-flex justify-content-center fw-bolder fs-1 card-title">{productos.titulo}</h2>
+            <p className="st-italic fs-5 card-detalle">{productos.detalle}</p>
+            {/*------ body compra------ */}
+            <div className='precios d-flex justify-content-center'>
+          {
+            productos.discount?
+            <>
+            <p className='precio fs-6'><span className="fw-light red">({productos.discount}% OFF)</span><del className='fw-light'>${Math.round(productos.precio + ((productos.precio * productos.discount)/100))}</del></p>
+            <br />
+            <p className="fs-3">${Math.round(productos.precio)}</p>
+            </>
+            :
+            <p className='precio'>${productos.precio}</p>
+          }
+          <div>
+          {
+              productos.stock? <p className='stock'><FaCircle className='green'/> {productos.stock}</p>
               :
-              <p className='precio'>${productos.precio}</p>
+              <p className='stock'><FaCircle className='red'/> Sin Stock</p>
             }
-            <div>
-            {
-                productos.stock? <p className='stock'><FaCircle className='green'/> {productos.stock}</p>
-                :
-                <p className='stock'><FaCircle className='red'/> Sin Stock</p>
-              }
-            </div>
-            </div>
-            {
-              isInCart?
-              <div className="d-flex justify-content-center">         
-              <Link to="/cart">
-              <Button  id={productos.id} >ir al Carrito</Button>
-              </Link>
-              <Link to='/'>
-              <Button >Seguir Comprando</Button>
-              </Link>
-              </div> 
-              :
-              <ItemCount cantidad={stockActualizado} onAddtoCart={agregarAlCarro}/>
-            }
-          </Card.Body>
-        </Card>
-  );
-}
-
-export default ItemDetailContainer;
+          </div>
+          </div>
+          {
+            isInCart?
+            <div className="d-flex justify-content-center">         
+            <Link to="/cart">
+            <Button  id={productos.id} >ir al Carrito</Button>
+            </Link>
+            <Link to='/'>
+            <Button >Seguir Comprando</Button>
+            </Link>
+            </div> 
+            :
+            <ItemCount cantidad={stockActualizado} onAddtoCart={agregarAlCarro}/>
+          }
+      </div>
+      <section>
+        
+      </section>
+    </div>
+    );
+  }
+  
+  export default ItemDetailContainer;
+  
+  // <Card className='ItemDetail  img-fluid cardsDetail d-flex justify-content-center cards'>
+  //       <Card.Img variant="top" className='h-5 imgMixD  imgDetail img-fluid d-flex justify-content-center' src={productos.imagen} />
+  //       <Card.Body >
+  //         <Card.Title className="titulo">{productos.titulo}</Card.Title>
+  //         <Card.Text className='detalle detail'>
+  //           {productos.detalle}
+  //         </Card.Text>
+  //         <div className='precios'>
+  //         {
+  //           productos.discount?
+  //           <p className='precio'><del>${Math.round(productos.precio + ((productos.precio * productos.discount)/100))}</del><br /> ${Math.round(productos.precio)} </p>
+  //           :
+  //           <p className='precio'>${productos.precio}</p>
+  //         }
+  //         <div>
+  //         {
+  //             productos.stock? <p className='stock'><FaCircle className='green'/> {productos.stock}</p>
+  //             :
+  //             <p className='stock'><FaCircle className='red'/> Sin Stock</p>
+  //           }
+  //         </div>
+  //         </div>
+  //         {
+  //           isInCart?
+  //           <div className="d-flex justify-content-center">         
+  //           <Link to="/cart">
+  //           <Button  id={productos.id} >ir al Carrito</Button>
+  //           </Link>
+  //           <Link to='/'>
+  //           <Button >Seguir Comprando</Button>
+  //           </Link>
+  //           </div> 
+  //           :
+  //           <ItemCount cantidad={stockActualizado} onAddtoCart={agregarAlCarro}/>
+  //         }
+  //       </Card.Body>
+  //     </Card>

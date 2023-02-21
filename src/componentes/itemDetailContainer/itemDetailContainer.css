@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&display=swap');
+
 .ItemDetail{
     display: flex;
     justify-content: center!important;
@@ -25,4 +27,9 @@
     font-size: 15px;
     font-weight: lighter;
     margin-left: 5px;
+}
+.card-title{
+    margin: 30px;
+    font-family: 'Bebas Neue', cursive;
+    text-shadow: 0px 1px 10px rgb(255, 15, 255);
 }

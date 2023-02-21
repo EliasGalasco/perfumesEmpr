@@ -27,7 +27,7 @@ function EstructureCard({id, titulo, detalle, imagen, precio, stock, discount, c
             <div className='precios'>
             <div>
             { discount &&
-            <span style={{color: "#43c745"}}>Desc: {discount}%</span>
+            <span  style={{color: "#43c745"}}>Desc: {discount}%</span>
             }
               {
                 stock? <p className='stock'><FaCircle className='green'/> {stock}</p>
@@ -37,7 +37,7 @@ function EstructureCard({id, titulo, detalle, imagen, precio, stock, discount, c
             </div>
             {
               discount?
-              <p className='precio'><del>${Math.round(precio + ((precio * discount)/100))}</del><br /> ${Math.round(precio)} </p>
+              <p className='precio'><del className='fw-light'>${Math.round(precio + ((precio * discount)/100))}</del><br /> ${Math.round(precio)} </p>
               :
               <p className='precio'>${precio}</p>
             }

@@ -10,12 +10,13 @@ import NotFoundPage from "./Page/NotFoundPage";
 import {CartContextProvider} from './storage/cartContext'
 import CartContainer from "./componentes/cartContainer/CartContainer";
 import { exportDataWithBatch } from "./services/firebase";
+import WhatspFlot from "./componentes/WhatspFlot/WhatspFlot";
 
 function App() {
   return (
     /*4 Colocar Provider personalizado */
     <CartContextProvider>
-        <button onClick={exportDataWithBatch}>Exportar</button>   
+        {/* <button onClick={exportDataWithBatch}>Exportar</button>    */}
         <BrowserRouter>
           <NavBar/>
             <Routes>
@@ -25,6 +26,7 @@ function App() {
               <Route path="/cart" element={<CartContainer/>} />
               <Route path="*" element={<NotFoundPage/>}/>
             </Routes>
+            <WhatspFlot/>
             <Footer/>
         </BrowserRouter>
     </CartContextProvider>
