@@ -10,36 +10,36 @@ import { Link } from 'react-router-dom';
 function EstructureCard({id, titulo, detalle, imagen, precio, stock, discount, cantidad}) {
   const urlDetail = `/item/${id}`;
     return (
-        <Card className='col-6 cards col-md-6 col-lg-6 m-1 ' style={{ width: '18rem' }}>
+        <Card className='col-6 cards col-md-6 col-lg-12 m-1 ' style={{ width: '18rem' }}>
           <Card.Img variant="top" className='h-5 img-fluid imgMix' src={imagen} />
           <Card.Body className='card-container'>
             <Card.Title className='titulo'>{titulo}</Card.Title>
             <Card.Text className='detalle detail'>
               {detalle}
             </Card.Text>
-            {
-              stock?
-              <Link to={urlDetail}><Button className='btnDetalle' id={id} >Ver Detalle</Button></Link>
-              :
-              <Link to={urlDetail}><Button className='disabled' id={id} >Ver Detalle</Button></Link>
-
-            }
-            <div className='precios'>
+            <div className='precios d-block'>
             <div>
-            { discount &&
-            <span  style={{color: "#43c745"}}>Desc: {discount}%</span>
-            }
               {
-                stock? <p className='stock'><FaCircle className='green'/> {stock}</p>
+                stock? <p className='stock '><FaCircle className='green'/> {stock}</p>
                 :
                 <p className='stock '><FaCircle className='red'/> Sin Stock</p>
               }
             </div>
             {
               discount?
-              <p className='precio'><del className='fw-light'>${Math.round(precio + ((precio * discount)/100))}</del><br /> ${Math.round(precio)} </p>
-              :
+            <>
+            <p className='precio fs-6'><span className="fw-light red">({discount}% OFF)</span><del className='fw-light'>${Math.round(precio + ((precio * discount)/100))}</del></p>
+            <br />
+            <p className="fs-3 precio">${Math.round(precio)}</p>
+            </>              :
               <p className='precio'>${precio}</p>
+            }
+            {
+              stock?
+              <Link to={urlDetail}><Button className='btnDetalle' id={id} >Ver Detalle</Button></Link>
+              :
+              <Link to={urlDetail}><Button className='disabled' id={id} >Ver Detalle</Button></Link>
+
             }
             </div>
           </Card.Body>

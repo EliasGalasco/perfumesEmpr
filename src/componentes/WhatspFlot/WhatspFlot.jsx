@@ -6,7 +6,7 @@ import { FaWhatsapp } from "react-icons/fa";
 function WhatspFlot() {
   return (
     <div class="logoInstagramfixed">
-        <a target="_blank" href="https://wa.link/kqbejq">
+        <a target="_blank" href="https://wa.link/kqbejq ">
             <FaWhatsapp className='i'></FaWhatsapp>
         </a>
     </div>

@@ -33,3 +33,6 @@
     font-family: 'Bebas Neue', cursive;
     text-shadow: 0px 1px 10px rgb(255, 15, 255);
 }
+.imgDetail{
+    overflow: hidden;
+}

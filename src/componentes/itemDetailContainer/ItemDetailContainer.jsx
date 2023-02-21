@@ -69,7 +69,7 @@ function ItemDetailContainer() {
   return (
     <div class="container-fluid row ">
       <div class="col-12 col-md-6 d-flex justify-content-center">
-        <img class="" src={productos.imagen} alt=""/>
+        <img class="imgDetail" src={productos.imagen} alt=""/>
       </div>
       <div class="col-12 col-md-12 col-lg-6">
             <h2 class="d-flex justify-content-center fw-bolder fs-1 card-title">{productos.titulo}</h2>
