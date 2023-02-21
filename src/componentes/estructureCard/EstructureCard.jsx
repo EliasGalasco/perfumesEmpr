@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 function EstructureCard({id, titulo, detalle, imagen, precio, stock, discount, cantidad}) {
   const urlDetail = `/item/${id}`;
     return (
-        <Card className='col-12 cards col-md-6 col-lg-6 col-xl-4 m-1 ' style={{ width: '18rem' }}>
+        <Card className='col-6 cards col-md-6 col-lg-6 m-1 ' style={{ width: '18rem' }}>
           <Card.Img variant="top" className='h-5 img-fluid imgMix' src={imagen} />
           <Card.Body className='card-container'>
             <Card.Title className='titulo'>{titulo}</Card.Title>

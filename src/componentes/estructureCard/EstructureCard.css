@@ -75,9 +75,11 @@
     box-shadow: 0 10px 10px 0 #121618;
 }
 .btnDetalle{
-    background-color: rgb(161, 154, 154);
+    background-color: rgb(255, 199, 248);
     padding: 5px 40px;
-
+}
+a{
+    text-decoration: none;
 }
 .Btn-irCarrito{
     margin: 0px;
@@ -111,7 +113,7 @@
     filter: brightness(1.2);
 }
 /*-- MIXINS --*/
-@media (max-width: 500px) {
+@media (max-width: 620px) {
     .imgMix{
         height: 300px;
     }
@@ -124,5 +126,31 @@
     .carousel{
         height: 400px;
         margin-bottom: 20px;
+    }
+    /*Detalle cards responsive*/
+    .cards{
+        width: 190px!important;
+        overflow: hidden;
+        padding: 0px;
+    }
+    .card-body{
+        height: auto;
+    }
+    .detalle{
+        display: none;
+    }
+    .btnDetalle{
+        margin-left: 2px!important;
+        padding-left: auto;
+        padding-top: 1px;
+        justify-content: center;
+        display: flex;
+    }
+    .container-fluid{
+        margin: 0px;
+        padding: 0px;
+    }
+    .stock{
+        display: none;
     }
 }

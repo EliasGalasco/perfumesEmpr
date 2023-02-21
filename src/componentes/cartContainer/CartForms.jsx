@@ -65,13 +65,13 @@ export default function CartForm(props) {
 
   return (
     <form onSubmit={onSubmit}>
-    {arrayUserData.map((field) => (
+    {arrayUserData.map((field, index) => (
         <InputForm
             name={field}
             value={userData[field]}
             onInputChange={onInputChange}
             label={field}
-            keys={field.id} 
+            key={index} 
         />
     ))}
     <div className="d-flex justify-content-center">
