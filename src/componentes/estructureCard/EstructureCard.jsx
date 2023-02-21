@@ -28,7 +28,7 @@ function EstructureCard({id, titulo, detalle, imagen, precio, stock, discount, c
             {
               discount?
             <>
-            <p className='precio fs-6'><span className="fw-light red">({discount}% OFF)</span><del className='fw-light'>${Math.round(precio + ((precio * discount)/100))}</del></p>
+            <p className='precio fs-6'><span className="fw-light red">({discount}% OFF)</span><del className='fw-light'>${parseInt(precio + ((precio * discount )/100 +252))}</del></p>
             <br />
             <p className="fs-3 precio">${Math.round(precio)}</p>
             </>              :
