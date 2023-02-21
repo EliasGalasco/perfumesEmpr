@@ -134,10 +134,11 @@ a{
     }
     /*Detalle cards responsive*/
     .cards{
-        width: 190px!important;
+        width: 170px!important;
         overflow: hidden;
         padding: 0px;
     }
+    
     .card-body{
         height: auto;
     }
