@@ -11,6 +11,8 @@ function Inicio() {
           alt="First slide"
         />
         <Carousel.Caption>
+          <h3></h3>
+          <p></p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -21,6 +23,8 @@ function Inicio() {
         />
 
         <Carousel.Caption>
+          <h3></h3>
+          <p></p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -31,6 +35,9 @@ function Inicio() {
         />
 
         <Carousel.Caption>
+          <h3></h3>
+          <p>
+          </p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
